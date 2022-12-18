@@ -30,6 +30,7 @@ type Props = {
   arcBackgroundColor: string;
   coerceToInt?: boolean;
   outerShadow?: boolean;
+  hanldeEl?: JSX.Element;
 };
 
 export class CircularSlider extends React.Component<
@@ -184,6 +185,7 @@ export class CircularSlider extends React.Component<
       arcColor,
       arcBackgroundColor,
       outerShadow,
+      hanldeEl,
     } = this.props;
     const trackWidth = 4;
     const shadowWidth = 20;
@@ -366,6 +368,7 @@ export class CircularSlider extends React.Component<
                 fill="#ffffff"
                 filter="url(#handleShadow)"
               />
+              {hanldeEl}
             </React.Fragment>
           )
         }
@@ -381,6 +384,7 @@ export class CircularSlider extends React.Component<
                 fill="#ffffff"
                 filter="url(#handleShadow)"
               />
+              {hanldeEl}
             </React.Fragment>
           )
         }
