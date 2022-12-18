@@ -365,8 +365,8 @@ export class CircularSlider extends React.Component<
                 <foreignObject
                   width={handleSize}
                   height={handleSize}
-                  cx={handle1Position.x / 2}
-                  cy={handle1Position.y / 2}
+                  x={handle1Position.x / 2}
+                  y={handle1Position.y / 2}
                 >
                   {handleEl}
                 </foreignObject>
