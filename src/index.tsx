@@ -221,6 +221,8 @@ export class CircularSlider extends React.Component<
 
     const controllable = !disabled && Boolean(handle1.onChange);
 
+    console.log(handleEl);
+
     return (
       <svg
         width={size}
