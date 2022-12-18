@@ -381,24 +381,14 @@ export class CircularSlider extends React.Component<
                 />
                 <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
               </filter>
-              {handleEl ? (
-                <foreignObject
-                  width={handleSize}
-                  height={handleSize}
-                  x={handle1Position.x}
-                  y={handle1Position.y}
-                >
-                  {handleEl}
-                </foreignObject>
-              ) : (
-                <circle
-                  r={handleSize}
-                  cx={handle1Position.x}
-                  cy={handle1Position.y}
-                  fill="#ffffff"
-                  filter="url(#handleShadow)"
-                />
-              )}
+
+              <circle
+                r={handleSize}
+                cx={handle1Position.x}
+                cy={handle1Position.y}
+                fill={imgSrc ? "url(#image)" : "#ffffff"}
+                filter="url(#handleShadow)"
+              />
             </React.Fragment>
           )
         }
@@ -414,7 +404,6 @@ export class CircularSlider extends React.Component<
                 fill="#ffffff"
                 filter="url(#handleShadow)"
               />
-              {handleEl}
             </React.Fragment>
           )
         }
