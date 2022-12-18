@@ -31,6 +31,7 @@ type Props = {
   coerceToInt?: boolean;
   outerShadow?: boolean;
   handleEl?: JSX.Element;
+  imgSrc: string;
 };
 
 export class CircularSlider extends React.Component<
@@ -186,6 +187,7 @@ export class CircularSlider extends React.Component<
       arcBackgroundColor,
       outerShadow,
       handleEl,
+      imgSrc,
     } = this.props;
     const trackWidth = 4;
     const shadowWidth = 20;
@@ -239,6 +241,24 @@ export class CircularSlider extends React.Component<
         onTouchMove={this.onTouch}
         style={{ touchAction: "none" }}
       >
+        <defs>
+          <pattern
+            id="image"
+            x="0%"
+            y="0%"
+            height="100%"
+            width="100%"
+            viewBox={`0 0 ${handleSize * 2} ${handleSize * 2}`}
+          >
+            <image
+              x="0%"
+              y="0%"
+              width={handleSize * 2}
+              height={handleSize * 2}
+              href={imgSrc}
+            ></image>
+          </pattern>
+        </defs>
         {
           /* Shadow */
           outerShadow && (
