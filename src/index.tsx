@@ -363,13 +363,13 @@ export class CircularSlider extends React.Component<
                 />
                 <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
               </filter>
-              <circle
+              {/* <circle
                 r={handleSize}
                 cx={handle1Position.x}
                 cy={handle1Position.y}
                 fill="#ffffff"
                 filter="url(#handleShadow)"
-              />
+              /> */}
               {handleEl}
             </React.Fragment>
           )
