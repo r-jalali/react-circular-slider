@@ -31,7 +31,7 @@ type Props = {
   coerceToInt?: boolean;
   outerShadow?: boolean;
   handleEl?: JSX.Element;
-  imgSrc: string;
+  imgSrc?: string;
 };
 
 export class CircularSlider extends React.Component<
