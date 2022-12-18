@@ -368,9 +368,9 @@ export class CircularSlider extends React.Component<
                 fill="#ffffff"
                 filter="url(#handleShadow)"
               />
-              <foreignObject width={handleSize} height={handleSize}>
-                {handleEl}
-              </foreignObject>
+              {/* <foreignObject width={handleSize} height={handleSize}> */}
+              {handleEl}
+              {/* </foreignObject> */}
             </React.Fragment>
           )
         }
